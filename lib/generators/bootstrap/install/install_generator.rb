@@ -6,8 +6,8 @@ module Bootstrap
       desc 'Copy BootstrapGenerators default files'
       source_root ::File.expand_path('../templates', __FILE__)
 
-      class_option :template_engine
-      class_option :stylesheet_engine
+      class_option :template_engine, :default => 'erb'
+      class_option :stylesheet_engine, :default => 'scss'
       class_option :skip_turbolinks, :type => :boolean, :default => false, :desc => "Skip Turbolinks on assets"
 
       def copy_lib
@@ -27,7 +27,7 @@ module Bootstrap
 
         copy_file "assets/stylesheets/starter.#{stylesheet_extension}", "app/assets/stylesheets/bootstrap-generators.#{stylesheet_extension}"
 
-        if [:less, :scss].include?(options[:stylesheet_engine].to_sym)
+        if [:scss].include?(options[:stylesheet_engine].to_sym)
           copy_file "assets/stylesheets/bootstrap-variables.#{stylesheet_extension}", "app/assets/stylesheets/bootstrap-variables.#{stylesheet_extension}"
         end
       end

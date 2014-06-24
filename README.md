@@ -1,5 +1,7 @@
 # Bootstrap Generators
 
+NOTE:  This version of Bootstrap Generators has been modified to work with `bootstrap-sass`.
+
 [![Build Status](https://travis-ci.org/decioferreira/bootstrap-generators.png?branch=master)](https://travis-ci.org/decioferreira/bootstrap-generators)
 
 Bootstrap-generators provides [Twitter Bootstrap](http://getbootstrap.com/) generators for Rails 4 (supported Rails >= 3.1). Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites.

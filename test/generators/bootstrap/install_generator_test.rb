@@ -66,13 +66,13 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     end
   end
 
-  test 'should copy css files' do
-    run_generator %w(-f --stylesheet-engine css)
+#  test 'should copy css files' do
+#    run_generator %w(-f --stylesheet-engine css)
+#
+#    assert_file 'app/assets/stylesheets/bootstrap-generators.css'
+#  end
 
-    assert_file 'app/assets/stylesheets/bootstrap-generators.css'
-  end
-
-  css_preprocessors = %w{scss less}
+  css_preprocessors = %w{scss}
   css_preprocessors.each do |css_preprocessor|
     test "should copy #{css_preprocessor} files" do
       run_generator %W(-f --stylesheet-engine #{css_preprocessor})
